@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trader Persona - Master Trading Psychology | Trading Ebook ₹120</title>
+    <meta name="description" content="Master trading psychology with our comprehensive ebook. Learn trading discipline, market psychology, and intraday strategies for just ₹120.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-dark: #0A1628;
+            --secondary-dark: #1B2B4A;
+            --black: #0D0D0D;
+            --gold: #FFD700;
+            --gold-dark: #D4AF37;
+            --white: #FFFFFF;
+            --gray-light: #F8F9FA;
+            --gray: #6C757D;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--white);
+            background-color: var(--primary-dark);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--gold);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><pattern id="grain" width="100" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1.5" fill="%23FFD700" opacity="0.1"/><circle cx="30" cy="5" r="1" fill="%23FFD700" opacity="0.1"/><circle cx="50" cy="15" r="1.5" fill="%23FFD700" opacity="0.1"/><circle cx="70" cy="8" r="1" fill="%23FFD700" opacity="0.1"/><circle cx="90" cy="12" r="1.5" fill="%23FFD700" opacity="0.1"/></pattern></defs><rect width="100" height="20" fill="url(%23grain)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        
+        .brand-name {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-headline {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-light);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--gold);
+            color: var(--black);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+            background: var(--gold-dark);
+        }
+        
+        .btn-large {
+            padding: 20px 50px;
+            font-size: 1.2rem;
+        }
+        
+        /* About Section */
+        .about {
+            background: var(--secondary-dark);
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray-light);
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            background: var(--black);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .benefit-card {
+            background: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.2);
+        }
+        
+        .benefit-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: var(--primary-dark);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--gold);
+            position: relative;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--gold);
+        }
+        
+        .stars {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        /* Buy Section */
+        .buy-section {
+            background: linear-gradient(135deg, var(--black) 0%, var(--secondary-dark) 100%);
+            text-align: center;
+        }
+        
+        .price-display {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .price-subtext {
+            font-size: 1.1rem;
+            color: var(--gray-light);
+            margin-bottom: 3rem;
+        }
+        
+        .payment-options {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .payment-card {
+            background: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--gold);
+        }
+        
+        .payment-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .qr-placeholder {
+            width: 150px;
+            height: 150px;
+            background: var(--white);
+            border: 2px dashed var(--gold);
+            margin: 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            color: var(--black);
+            font-weight: 600;
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+        
+        /* Future Courses */
+        .future-courses {
+            background: var(--primary-dark);
+        }
+        
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .course-card {
+            background: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--gold);
+            opacity: 0.8;
+            position: relative;
+        }
+        
+        .coming-soon-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--gold);
+            color: var(--black);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .course-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .course-description {
+            color: var(--gray-light);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--black);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: var(--gold-dark);
+        }
+        
+        .footer-social {
+            margin-bottom: 2rem;
+        }
+        
+        .social-link {
+            display: inline-block;
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-2px);
+            color: var(--gold-dark);
+        }
+        
+        .copyright {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Sticky Buy Button for Mobile */
+        .sticky-buy {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .brand-name {
+                font-size: 2.5rem;
+            }
+            
+            .hero-headline {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .price-display {
+                font-size: 3rem;
+            }
+            
+            .benefits-grid,
+            .testimonials-grid,
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .sticky-buy {
+                display: block;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .brand-name {
+                font-size: 2rem;
+            }
+            
+            .hero-headline {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            .btn-large {
+                padding: 15px 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="brand-name">Trader Persona</h1>
+                <h2 class="hero-headline">Master Trading Psychology with Just ₹120</h2>
+                <p class="hero-subtitle">Learn the winning mindset and psychology that separates successful traders from the rest</p>
+                <a href="#buy" class="btn btn-large">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Ebook Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="section-title">About the Ebook</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    This comprehensive guide is designed for aspiring traders who want to master the mental game of trading. 
+                    Learn proven strategies for trading discipline, understand the psychology behind winning trades, and get 
+                    practical intraday tips perfect for beginners. Transform your trading mindset and start making informed decisions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn Section -->
+    <section class="benefits section" id="benefits">
+        <div class="container">
+            <h2 class="section-title">What You'll Learn</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="benefit-text">Controlling Emotions During Trades</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="benefit-text">Reading Market Trends Like a Pro</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="benefit-text">Avoiding Common Loss Traps</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="benefit-text">Building Trading Discipline</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="benefit-text">Psychology of Successful Traders</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="benefit-text">Beginner-Friendly Intraday Tips</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Traders Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"This ebook changed my trading approach completely. Highly recommended!"</p>
+                    <div class="testimonial-author">- Testimonial 1</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best investment I made in my trading journey. Worth every rupee!"</p>
+                    <div class="testimonial-author">- Testimonial 2</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Clear, practical advice that actually works. A must-read for beginners."</p>
+                    <div class="testimonial-author">- Testimonial 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Section -->
+    <section class="buy-section section" id="buy">
+        <div class="container">
+            <h2 class="section-title">Get Instant Access</h2>
+            <div class="price-display">₹120</div>
+            <p class="price-subtext">One-time payment • Instant Digital Access • Lifetime Updates</p>
+            
+            <a href="#payment" class="btn btn-large">Get Instant Access</a>
+            
+            <div class="payment-options" id="payment">
+                <div class="payment-card">
+                    <div class="payment-title">
+                        <i class="fas fa-credit-card"></i> Razorpay
+                    </div>
+                    <p>Pay with Card/UPI/Wallet</p>
+                    <a href="#" class="btn" onclick="alert('Razorpay integration placeholder')">Pay with Razorpay</a>
+                </div>
+                
+                <div class="payment-card">
+                    <div class="payment-title">
+                        <i class="fas fa-qrcode"></i> UPI QR Code
+                    </div>
+                    <div class="qr-placeholder">
+                        QR Code Here<br>
+                        <small>Scan to Pay</small>
+                    </div>
+                    <p><small>After payment, WhatsApp screenshot to get instant access</small></p>
+                </div>
+                
+                <div class="payment-card">
+                    <div class="payment-title">
+                        <i class="fas fa-mobile-alt"></i> Direct Payment
+                    </div>
+                    <p>Quick payment via:</p>
+                    <a href="#" class="btn" onclick="alert('Paytm payment placeholder')" style="margin: 0.5rem; display: inline-block;">Paytm</a>
+                    <a href="#" class="btn" onclick="alert('PhonePe payment placeholder')" style="margin: 0.5rem; display: inline-block;">PhonePe</a>
+                </div>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i class="fas fa-lock"></i>
+                    <span>Secure Payment</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-download"></i>
+                    <span>Instant Download</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Courses Section -->
+    <section class="future-courses section" id="courses">
+        <div class="container">
+            <h2 class="section-title">Coming Soon</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="coming-soon-badge">Coming Soon</div>
+                    <h3 class="course-title">Beginner to Pro Trader Course</h3>
+                    <p class="course-description">Complete transformation program designed to take you from beginner to professional trader with advanced strategies and mentorship.</p>
+                </div>
+                <div class="course-card">
+                    <div class="coming-soon-badge">Coming Soon</div>
+                    <h3 class="course-title">Intraday Mastery Program</h3>
+                    <p class="course-description">Advanced strategies for day trading with live market analysis, risk management, and proven intraday techniques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://instagram.com/traderpersona" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            
+            <div class="footer-links">
+                <a href="mailto:traderpersona@email.com" class="footer-link">
+                    <i class="fas fa-envelope"></i> traderpersona@email.com
+                </a>
+                <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="footer-link">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Queries
+                </a>
+            </div>
+            
+            <p class="copyright">© 2025 Trader Persona. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Buy Button for Mobile -->
+    <div class="sticky-buy">
+        <a href="#buy" class="btn">Buy Now ₹120</a>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Show/hide sticky buy button on scroll
+        let stickyButton = document.querySelector('.sticky-buy');
+        let buySection = document.querySelector('#buy');
+        
+        window.addEventListener('scroll', function() {
+            if (window.innerWidth <= 768) {
+                let buyRect = buySection.getBoundingClientRect();
+                if (buyRect.bottom < window.innerHeight && buyRect.top < 0) {
+                    stickyButton.style.display = 'none';
+                } else {
+                    stickyButton.style.display = 'block';
+                }
+            }
+        });
+
+        // Button click animations
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Add ripple effect
+                let ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+                
+                let rect = this.getBoundingClientRect();
+                let size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add CSS for ripple effect
+        const style = document.createElement('style');
+        style.textContent = `
+            .btn {
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .ripple {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.3);
+                transform: scale(0);
+                animation: ripple-animation 0.6s linear;
+                pointer-events: none;
+            }
+            
+            @keyframes ripple-animation {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.benefit-card, .testimonial-card, .course-card, .payment-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
